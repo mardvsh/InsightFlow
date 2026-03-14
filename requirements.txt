@@ -1,0 +1,10 @@
+pandas>=2.2.0
+requests>=2.32.0
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.0
+scikit-learn>=1.5.0
+streamlit>=1.40.0
+schedule>=1.2.0
+pyspark>=3.5.0
+dbt-postgres>=1.8.0
+python-dotenv>=1.0.0

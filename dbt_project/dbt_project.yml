@@ -1,0 +1,15 @@
+name: insightflow_dbt
+version: 1.0.0
+config-version: 2
+
+profile: insightflow
+
+model-paths: ["models"]
+test-paths: ["tests"]
+
+models:
+  insightflow_dbt:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

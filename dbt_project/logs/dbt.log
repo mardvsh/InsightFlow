@@ -1,0 +1,1381 @@
+[0m17:35:11.633683 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D92BCF7140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D92971D010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9286F9880>]}
+
+
+============================== 17:35:11.643403 | 1d800dc4-ce65-47d4-855b-a3ed2fb616a7 ==============================
+[0m17:35:11.643403 [info ] [MainThread]: Running with dbt=1.11.7
+[0m17:35:11.644405 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt run --profiles-dir .', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\marin\\OneDrive\\Desktop\\InsightFlow\\dbt_project\\logs'}
+[0m17:35:11.851855 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1d800dc4-ce65-47d4-855b-a3ed2fb616a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D92C40B1A0>]}
+[0m17:35:11.910254 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1d800dc4-ce65-47d4-855b-a3ed2fb616a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D92C438470>]}
+[0m17:35:11.911823 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m17:35:12.259329 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m17:35:12.260329 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m17:35:12.260329 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '1d800dc4-ce65-47d4-855b-a3ed2fb616a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D92D878D10>]}
+[0m17:35:14.198730 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1d800dc4-ce65-47d4-855b-a3ed2fb616a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D92D4D72F0>]}
+[0m17:35:14.258133 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\marin\OneDrive\Desktop\InsightFlow\dbt_project\target\manifest.json
+[0m17:35:14.258133 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\marin\OneDrive\Desktop\InsightFlow\dbt_project\target\semantic_manifest.json
+[0m17:35:14.288389 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1d800dc4-ce65-47d4-855b-a3ed2fb616a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D92DD01D30>]}
+[0m17:35:14.289471 [info ] [MainThread]: Found 3 models, 7 data tests, 464 macros
+[0m17:35:14.289471 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1d800dc4-ce65-47d4-855b-a3ed2fb616a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D92DC9EC30>]}
+[0m17:35:14.291495 [info ] [MainThread]: 
+[0m17:35:14.291495 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:35:14.292506 [info ] [MainThread]: 
+[0m17:35:14.292506 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:35:14.296028 [debug] [ThreadPool]: Acquiring new postgres connection 'list_insightflow'
+[0m17:35:16.575665 [debug] [ThreadPool]: Using postgres connection "list_insightflow"
+[0m17:35:16.575665 [debug] [ThreadPool]: On list_insightflow: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "connection_name": "list_insightflow"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m17:35:16.575665 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:35:16.621397 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.039 seconds
+[0m17:35:16.622915 [debug] [ThreadPool]: On list_insightflow: Close
+[0m17:35:16.624923 [debug] [ThreadPool]: Acquiring new postgres connection 'list_insightflow_public'
+[0m17:35:16.627710 [debug] [ThreadPool]: Using postgres connection "list_insightflow_public"
+[0m17:35:16.627710 [debug] [ThreadPool]: On list_insightflow_public: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "connection_name": "list_insightflow_public"} */
+select
+      'insightflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'insightflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'insightflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m17:35:16.630941 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:35:16.675236 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.045 seconds
+[0m17:35:16.676746 [debug] [ThreadPool]: On list_insightflow_public: ROLLBACK
+[0m17:35:16.677806 [debug] [ThreadPool]: On list_insightflow_public: Close
+[0m17:35:16.681816 [debug] [MainThread]: Using postgres connection "master"
+[0m17:35:16.682816 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m17:35:16.682816 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:35:16.700268 [debug] [MainThread]: SQL status: SELECT 0 in 0.018 seconds
+[0m17:35:16.702285 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1d800dc4-ce65-47d4-855b-a3ed2fb616a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D92DCD9CA0>]}
+[0m17:35:16.702285 [debug] [MainThread]: On master: ROLLBACK
+[0m17:35:16.703283 [debug] [MainThread]: On master: COMMIT
+[0m17:35:16.703829 [debug] [MainThread]: Using postgres connection "master"
+[0m17:35:16.703829 [debug] [MainThread]: On master: COMMIT
+[0m17:35:16.704749 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m17:35:16.704749 [debug] [MainThread]: On master: Close
+[0m17:35:16.711274 [debug] [Thread-1 (]: Began running node model.insightflow_dbt.stg_raw_events
+[0m17:35:16.711274 [info ] [Thread-1 (]: 1 of 3 START sql view model public.stg_raw_events .............................. [RUN]
+[0m17:35:16.711274 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.insightflow_dbt.stg_raw_events'
+[0m17:35:16.711274 [debug] [Thread-1 (]: Began compiling node model.insightflow_dbt.stg_raw_events
+[0m17:35:16.719468 [debug] [Thread-1 (]: Writing injected SQL for node "model.insightflow_dbt.stg_raw_events"
+[0m17:35:16.721556 [debug] [Thread-1 (]: Began executing node model.insightflow_dbt.stg_raw_events
+[0m17:35:16.751751 [debug] [Thread-1 (]: Writing runtime sql for node "model.insightflow_dbt.stg_raw_events"
+[0m17:35:16.754126 [debug] [Thread-1 (]: Using postgres connection "model.insightflow_dbt.stg_raw_events"
+[0m17:35:16.754777 [debug] [Thread-1 (]: On model.insightflow_dbt.stg_raw_events: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "model.insightflow_dbt.stg_raw_events"} */
+
+  create view "insightflow"."public"."stg_raw_events__dbt_tmp"
+    
+    
+  as (
+    SELECT
+    event_id,
+    issue_number,
+    user_id,
+    user_login,
+    session_id,
+    event_type,
+    feature_used,
+    event_time,
+    source
+FROM raw_events
+  );
+[0m17:35:16.755109 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m17:35:16.769046 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.014 seconds
+[0m17:35:16.772949 [debug] [Thread-1 (]: Using postgres connection "model.insightflow_dbt.stg_raw_events"
+[0m17:35:16.772949 [debug] [Thread-1 (]: On model.insightflow_dbt.stg_raw_events: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "model.insightflow_dbt.stg_raw_events"} */
+alter table "insightflow"."public"."stg_raw_events__dbt_tmp" rename to "stg_raw_events"
+[0m17:35:16.772949 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m17:35:16.789860 [debug] [Thread-1 (]: On model.insightflow_dbt.stg_raw_events: COMMIT
+[0m17:35:16.789860 [debug] [Thread-1 (]: Using postgres connection "model.insightflow_dbt.stg_raw_events"
+[0m17:35:16.789860 [debug] [Thread-1 (]: On model.insightflow_dbt.stg_raw_events: COMMIT
+[0m17:35:16.792381 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m17:35:16.798543 [debug] [Thread-1 (]: Applying DROP to: "insightflow"."public"."stg_raw_events__dbt_backup"
+[0m17:35:16.802052 [debug] [Thread-1 (]: Using postgres connection "model.insightflow_dbt.stg_raw_events"
+[0m17:35:16.803189 [debug] [Thread-1 (]: On model.insightflow_dbt.stg_raw_events: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "model.insightflow_dbt.stg_raw_events"} */
+drop view if exists "insightflow"."public"."stg_raw_events__dbt_backup" cascade
+[0m17:35:16.804798 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m17:35:16.807427 [debug] [Thread-1 (]: On model.insightflow_dbt.stg_raw_events: Close
+[0m17:35:16.809514 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1d800dc4-ce65-47d4-855b-a3ed2fb616a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9290F1430>]}
+[0m17:35:16.810510 [info ] [Thread-1 (]: 1 of 3 OK created sql view model public.stg_raw_events ......................... [[32mCREATE VIEW[0m in 0.10s]
+[0m17:35:16.811743 [debug] [Thread-1 (]: Finished running node model.insightflow_dbt.stg_raw_events
+[0m17:35:16.811743 [debug] [Thread-3 (]: Began running node model.insightflow_dbt.mart_daily_metrics
+[0m17:35:16.812930 [debug] [Thread-4 (]: Began running node model.insightflow_dbt.mart_user_metrics
+[0m17:35:16.812930 [info ] [Thread-3 (]: 2 of 3 START sql table model public.mart_daily_metrics ......................... [RUN]
+[0m17:35:16.813930 [info ] [Thread-4 (]: 3 of 3 START sql table model public.mart_user_metrics .......................... [RUN]
+[0m17:35:16.813930 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.insightflow_dbt.mart_daily_metrics'
+[0m17:35:16.813930 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.insightflow_dbt.mart_user_metrics'
+[0m17:35:16.815272 [debug] [Thread-3 (]: Began compiling node model.insightflow_dbt.mart_daily_metrics
+[0m17:35:16.815272 [debug] [Thread-4 (]: Began compiling node model.insightflow_dbt.mart_user_metrics
+[0m17:35:16.817739 [debug] [Thread-3 (]: Writing injected SQL for node "model.insightflow_dbt.mart_daily_metrics"
+[0m17:35:16.820758 [debug] [Thread-4 (]: Writing injected SQL for node "model.insightflow_dbt.mart_user_metrics"
+[0m17:35:16.822433 [debug] [Thread-4 (]: Began executing node model.insightflow_dbt.mart_user_metrics
+[0m17:35:16.822994 [debug] [Thread-3 (]: Began executing node model.insightflow_dbt.mart_daily_metrics
+[0m17:35:16.841695 [debug] [Thread-4 (]: Writing runtime sql for node "model.insightflow_dbt.mart_user_metrics"
+[0m17:35:16.844834 [debug] [Thread-3 (]: Writing runtime sql for node "model.insightflow_dbt.mart_daily_metrics"
+[0m17:35:16.846987 [debug] [Thread-3 (]: Using postgres connection "model.insightflow_dbt.mart_daily_metrics"
+[0m17:35:16.846987 [debug] [Thread-4 (]: Using postgres connection "model.insightflow_dbt.mart_user_metrics"
+[0m17:35:16.848151 [debug] [Thread-3 (]: On model.insightflow_dbt.mart_daily_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "model.insightflow_dbt.mart_daily_metrics"} */
+
+  
+    
+
+  create  table "insightflow"."public"."mart_daily_metrics__dbt_tmp"
+  
+  
+    as
+  
+  (
+    SELECT
+    DATE(event_time) AS day,
+    COUNT(*) AS events,
+    COUNT(DISTINCT user_id) AS dau,
+    COUNT(DISTINCT session_id) AS sessions,
+    COUNT(DISTINCT CASE WHEN event_type = 'issue_closed' THEN user_id END) AS users_closed_issues
+FROM "insightflow"."public"."stg_raw_events"
+GROUP BY DATE(event_time)
+  );
+  
+[0m17:35:16.848151 [debug] [Thread-4 (]: On model.insightflow_dbt.mart_user_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "model.insightflow_dbt.mart_user_metrics"} */
+
+  
+    
+
+  create  table "insightflow"."public"."mart_user_metrics__dbt_tmp"
+  
+  
+    as
+  
+  (
+    SELECT
+    user_id,
+    MIN(event_time)::date AS first_seen_date,
+    MAX(event_time)::date AS last_seen_date,
+    COUNT(*) AS total_events,
+    COUNT(DISTINCT session_id) AS sessions,
+    COUNT(DISTINCT DATE(event_time)) AS active_days
+FROM "insightflow"."public"."stg_raw_events"
+GROUP BY user_id
+  );
+  
+[0m17:35:16.848151 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m17:35:16.849438 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m17:35:16.864217 [debug] [Thread-3 (]: SQL status: SELECT 4 in 0.015 seconds
+[0m17:35:16.865215 [debug] [Thread-4 (]: SQL status: SELECT 23 in 0.016 seconds
+[0m17:35:16.872097 [debug] [Thread-3 (]: Using postgres connection "model.insightflow_dbt.mart_daily_metrics"
+[0m17:35:16.873658 [debug] [Thread-4 (]: Using postgres connection "model.insightflow_dbt.mart_user_metrics"
+[0m17:35:16.873658 [debug] [Thread-3 (]: On model.insightflow_dbt.mart_daily_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "model.insightflow_dbt.mart_daily_metrics"} */
+alter table "insightflow"."public"."mart_daily_metrics__dbt_tmp" rename to "mart_daily_metrics"
+[0m17:35:16.873658 [debug] [Thread-4 (]: On model.insightflow_dbt.mart_user_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "model.insightflow_dbt.mart_user_metrics"} */
+alter table "insightflow"."public"."mart_user_metrics__dbt_tmp" rename to "mart_user_metrics"
+[0m17:35:16.876608 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m17:35:16.876608 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m17:35:16.878950 [debug] [Thread-4 (]: On model.insightflow_dbt.mart_user_metrics: COMMIT
+[0m17:35:16.878950 [debug] [Thread-3 (]: On model.insightflow_dbt.mart_daily_metrics: COMMIT
+[0m17:35:16.878950 [debug] [Thread-4 (]: Using postgres connection "model.insightflow_dbt.mart_user_metrics"
+[0m17:35:16.878950 [debug] [Thread-3 (]: Using postgres connection "model.insightflow_dbt.mart_daily_metrics"
+[0m17:35:16.878950 [debug] [Thread-4 (]: On model.insightflow_dbt.mart_user_metrics: COMMIT
+[0m17:35:16.881439 [debug] [Thread-3 (]: On model.insightflow_dbt.mart_daily_metrics: COMMIT
+[0m17:35:16.882446 [debug] [Thread-4 (]: SQL status: COMMIT in 0.002 seconds
+[0m17:35:16.882446 [debug] [Thread-4 (]: Applying DROP to: "insightflow"."public"."mart_user_metrics__dbt_backup"
+[0m17:35:16.882446 [debug] [Thread-3 (]: SQL status: COMMIT in 0.004 seconds
+[0m17:35:16.888943 [debug] [Thread-4 (]: Using postgres connection "model.insightflow_dbt.mart_user_metrics"
+[0m17:35:16.891254 [debug] [Thread-3 (]: Applying DROP to: "insightflow"."public"."mart_daily_metrics__dbt_backup"
+[0m17:35:16.891254 [debug] [Thread-4 (]: On model.insightflow_dbt.mart_user_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "model.insightflow_dbt.mart_user_metrics"} */
+drop table if exists "insightflow"."public"."mart_user_metrics__dbt_backup" cascade
+[0m17:35:16.892763 [debug] [Thread-3 (]: Using postgres connection "model.insightflow_dbt.mart_daily_metrics"
+[0m17:35:16.892763 [debug] [Thread-3 (]: On model.insightflow_dbt.mart_daily_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "model.insightflow_dbt.mart_daily_metrics"} */
+drop table if exists "insightflow"."public"."mart_daily_metrics__dbt_backup" cascade
+[0m17:35:16.892763 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m17:35:16.894203 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m17:35:16.895204 [debug] [Thread-4 (]: On model.insightflow_dbt.mart_user_metrics: Close
+[0m17:35:16.896203 [debug] [Thread-3 (]: On model.insightflow_dbt.mart_daily_metrics: Close
+[0m17:35:16.897206 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1d800dc4-ce65-47d4-855b-a3ed2fb616a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D92E20B8C0>]}
+[0m17:35:16.897206 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1d800dc4-ce65-47d4-855b-a3ed2fb616a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D92E225A90>]}
+[0m17:35:16.898205 [info ] [Thread-4 (]: 3 of 3 OK created sql table model public.mart_user_metrics ..................... [[32mSELECT 23[0m in 0.08s]
+[0m17:35:16.899532 [debug] [Thread-4 (]: Finished running node model.insightflow_dbt.mart_user_metrics
+[0m17:35:16.898205 [info ] [Thread-3 (]: 2 of 3 OK created sql table model public.mart_daily_metrics .................... [[32mSELECT 4[0m in 0.08s]
+[0m17:35:16.899532 [debug] [Thread-3 (]: Finished running node model.insightflow_dbt.mart_daily_metrics
+[0m17:35:16.901774 [debug] [MainThread]: On master: COMMIT
+[0m17:35:16.901774 [debug] [MainThread]: Using postgres connection "master"
+[0m17:35:16.901774 [debug] [MainThread]: On master: COMMIT
+[0m17:35:16.901774 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:35:16.913317 [debug] [MainThread]: SQL status: COMMIT in 0.011 seconds
+[0m17:35:16.913317 [debug] [MainThread]: On master: Close
+[0m17:35:16.913317 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:35:16.913317 [debug] [MainThread]: Connection 'list_insightflow' was properly closed.
+[0m17:35:16.913317 [debug] [MainThread]: Connection 'list_insightflow_public' was properly closed.
+[0m17:35:16.913317 [debug] [MainThread]: Connection 'model.insightflow_dbt.stg_raw_events' was properly closed.
+[0m17:35:16.913317 [debug] [MainThread]: Connection 'model.insightflow_dbt.mart_daily_metrics' was properly closed.
+[0m17:35:16.913317 [debug] [MainThread]: Connection 'model.insightflow_dbt.mart_user_metrics' was properly closed.
+[0m17:35:16.913317 [info ] [MainThread]: 
+[0m17:35:16.913317 [info ] [MainThread]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 2.62 seconds (2.62s).
+[0m17:35:16.913317 [debug] [MainThread]: Command end result
+[0m17:35:16.936258 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\marin\OneDrive\Desktop\InsightFlow\dbt_project\target\manifest.json
+[0m17:35:16.938139 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\marin\OneDrive\Desktop\InsightFlow\dbt_project\target\semantic_manifest.json
+[0m17:35:16.944186 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\marin\OneDrive\Desktop\InsightFlow\dbt_project\target\run_results.json
+[0m17:35:16.944690 [info ] [MainThread]: 
+[0m17:35:16.944690 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:35:16.945698 [info ] [MainThread]: 
+[0m17:35:16.945698 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m17:35:16.945698 [debug] [MainThread]: Command `dbt run` succeeded at 17:35:16.945698 after 5.44 seconds
+[0m17:35:16.945698 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D92B6778C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D92B757E30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D92D4FCFE0>]}
+[0m17:35:16.945698 [debug] [MainThread]: Flushing usage events
+[0m17:35:18.391751 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:35:22.933440 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AB6D7C3AA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AB6D7C1C40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AB6DB18920>]}
+
+
+============================== 17:35:22.938200 | 7cb33cd3-bf2e-4ed9-b53e-6a2ccd145a55 ==============================
+[0m17:35:22.938200 [info ] [MainThread]: Running with dbt=1.11.7
+[0m17:35:22.939708 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt test --profiles-dir .', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\marin\\OneDrive\\Desktop\\InsightFlow\\dbt_project\\logs'}
+[0m17:35:23.111615 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7cb33cd3-bf2e-4ed9-b53e-6a2ccd145a55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AB6F29FC80>]}
+[0m17:35:23.162827 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7cb33cd3-bf2e-4ed9-b53e-6a2ccd145a55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AB6F696720>]}
+[0m17:35:23.170144 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m17:35:23.462529 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m17:35:23.589516 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:35:23.589516 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m17:35:23.595990 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:35:23.629101 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7cb33cd3-bf2e-4ed9-b53e-6a2ccd145a55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AB6F77B8C0>]}
+[0m17:35:23.686960 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\marin\OneDrive\Desktop\InsightFlow\dbt_project\target\manifest.json
+[0m17:35:23.689364 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\marin\OneDrive\Desktop\InsightFlow\dbt_project\target\semantic_manifest.json
+[0m17:35:23.723800 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7cb33cd3-bf2e-4ed9-b53e-6a2ccd145a55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AB6FCA72F0>]}
+[0m17:35:23.724877 [info ] [MainThread]: Found 3 models, 7 data tests, 464 macros
+[0m17:35:23.724877 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7cb33cd3-bf2e-4ed9-b53e-6a2ccd145a55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AB6F836030>]}
+[0m17:35:23.726875 [info ] [MainThread]: 
+[0m17:35:23.727887 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:35:23.727887 [info ] [MainThread]: 
+[0m17:35:23.728967 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:35:23.732469 [debug] [ThreadPool]: Acquiring new postgres connection 'list_insightflow_public'
+[0m17:35:23.825436 [debug] [ThreadPool]: Using postgres connection "list_insightflow_public"
+[0m17:35:23.826436 [debug] [ThreadPool]: On list_insightflow_public: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "connection_name": "list_insightflow_public"} */
+select
+      'insightflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'insightflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'insightflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m17:35:23.826436 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:35:23.869470 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.043 seconds
+[0m17:35:23.871394 [debug] [ThreadPool]: On list_insightflow_public: ROLLBACK
+[0m17:35:23.882750 [debug] [ThreadPool]: On list_insightflow_public: Close
+[0m17:35:23.888272 [debug] [MainThread]: Using postgres connection "master"
+[0m17:35:23.888750 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m17:35:23.888750 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:35:23.903775 [debug] [MainThread]: SQL status: SELECT 1 in 0.015 seconds
+[0m17:35:23.904894 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7cb33cd3-bf2e-4ed9-b53e-6a2ccd145a55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AB6F77AD80>]}
+[0m17:35:23.904894 [debug] [MainThread]: On master: ROLLBACK
+[0m17:35:23.906598 [debug] [MainThread]: On master: COMMIT
+[0m17:35:23.906598 [debug] [MainThread]: Using postgres connection "master"
+[0m17:35:23.906598 [debug] [MainThread]: On master: COMMIT
+[0m17:35:23.907633 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m17:35:23.907633 [debug] [MainThread]: On master: Close
+[0m17:35:23.912468 [debug] [Thread-1 (]: Began running node test.insightflow_dbt.not_null_mart_daily_metrics_day.d911af4dc6
+[0m17:35:23.913579 [debug] [Thread-2 (]: Began running node test.insightflow_dbt.not_null_mart_user_metrics_user_id.122a3b1a5f
+[0m17:35:23.913579 [debug] [Thread-3 (]: Began running node test.insightflow_dbt.not_null_stg_raw_events_event_id.348d6d9dd0
+[0m17:35:23.914583 [debug] [Thread-4 (]: Began running node test.insightflow_dbt.not_null_stg_raw_events_event_time.a86e9fb8b4
+[0m17:35:23.913579 [info ] [Thread-1 (]: 1 of 7 START test not_null_mart_daily_metrics_day .............................. [RUN]
+[0m17:35:23.914583 [info ] [Thread-2 (]: 2 of 7 START test not_null_mart_user_metrics_user_id ........................... [RUN]
+[0m17:35:23.915582 [info ] [Thread-3 (]: 3 of 7 START test not_null_stg_raw_events_event_id ............................. [RUN]
+[0m17:35:23.915582 [debug] [Thread-1 (]: Acquiring new postgres connection 'test.insightflow_dbt.not_null_mart_daily_metrics_day.d911af4dc6'
+[0m17:35:23.917086 [debug] [Thread-2 (]: Acquiring new postgres connection 'test.insightflow_dbt.not_null_mart_user_metrics_user_id.122a3b1a5f'
+[0m17:35:23.915582 [info ] [Thread-4 (]: 4 of 7 START test not_null_stg_raw_events_event_time ........................... [RUN]
+[0m17:35:23.917086 [debug] [Thread-3 (]: Acquiring new postgres connection 'test.insightflow_dbt.not_null_stg_raw_events_event_id.348d6d9dd0'
+[0m17:35:23.917086 [debug] [Thread-1 (]: Began compiling node test.insightflow_dbt.not_null_mart_daily_metrics_day.d911af4dc6
+[0m17:35:23.918096 [debug] [Thread-2 (]: Began compiling node test.insightflow_dbt.not_null_mart_user_metrics_user_id.122a3b1a5f
+[0m17:35:23.918096 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.insightflow_dbt.not_null_stg_raw_events_event_time.a86e9fb8b4'
+[0m17:35:23.919094 [debug] [Thread-3 (]: Began compiling node test.insightflow_dbt.not_null_stg_raw_events_event_id.348d6d9dd0
+[0m17:35:23.931448 [debug] [Thread-1 (]: Writing injected SQL for node "test.insightflow_dbt.not_null_mart_daily_metrics_day.d911af4dc6"
+[0m17:35:23.937630 [debug] [Thread-2 (]: Writing injected SQL for node "test.insightflow_dbt.not_null_mart_user_metrics_user_id.122a3b1a5f"
+[0m17:35:23.938147 [debug] [Thread-4 (]: Began compiling node test.insightflow_dbt.not_null_stg_raw_events_event_time.a86e9fb8b4
+[0m17:35:23.942052 [debug] [Thread-3 (]: Writing injected SQL for node "test.insightflow_dbt.not_null_stg_raw_events_event_id.348d6d9dd0"
+[0m17:35:23.945755 [debug] [Thread-4 (]: Writing injected SQL for node "test.insightflow_dbt.not_null_stg_raw_events_event_time.a86e9fb8b4"
+[0m17:35:23.947887 [debug] [Thread-2 (]: Began executing node test.insightflow_dbt.not_null_mart_user_metrics_user_id.122a3b1a5f
+[0m17:35:23.958954 [debug] [Thread-2 (]: Writing runtime sql for node "test.insightflow_dbt.not_null_mart_user_metrics_user_id.122a3b1a5f"
+[0m17:35:23.965621 [debug] [Thread-1 (]: Began executing node test.insightflow_dbt.not_null_mart_daily_metrics_day.d911af4dc6
+[0m17:35:23.965621 [debug] [Thread-1 (]: Writing runtime sql for node "test.insightflow_dbt.not_null_mart_daily_metrics_day.d911af4dc6"
+[0m17:35:23.965621 [debug] [Thread-4 (]: Began executing node test.insightflow_dbt.not_null_stg_raw_events_event_time.a86e9fb8b4
+[0m17:35:23.969142 [debug] [Thread-4 (]: Writing runtime sql for node "test.insightflow_dbt.not_null_stg_raw_events_event_time.a86e9fb8b4"
+[0m17:35:23.969142 [debug] [Thread-3 (]: Began executing node test.insightflow_dbt.not_null_stg_raw_events_event_id.348d6d9dd0
+[0m17:35:23.973181 [debug] [Thread-3 (]: Writing runtime sql for node "test.insightflow_dbt.not_null_stg_raw_events_event_id.348d6d9dd0"
+[0m17:35:23.974251 [debug] [Thread-1 (]: Using postgres connection "test.insightflow_dbt.not_null_mart_daily_metrics_day.d911af4dc6"
+[0m17:35:23.974251 [debug] [Thread-4 (]: Using postgres connection "test.insightflow_dbt.not_null_stg_raw_events_event_time.a86e9fb8b4"
+[0m17:35:23.974251 [debug] [Thread-2 (]: Using postgres connection "test.insightflow_dbt.not_null_mart_user_metrics_user_id.122a3b1a5f"
+[0m17:35:23.975298 [debug] [Thread-1 (]: On test.insightflow_dbt.not_null_mart_daily_metrics_day.d911af4dc6: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "test.insightflow_dbt.not_null_mart_daily_metrics_day.d911af4dc6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select day
+from "insightflow"."public"."mart_daily_metrics"
+where day is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:35:23.975298 [debug] [Thread-4 (]: On test.insightflow_dbt.not_null_stg_raw_events_event_time.a86e9fb8b4: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "test.insightflow_dbt.not_null_stg_raw_events_event_time.a86e9fb8b4"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select event_time
+from "insightflow"."public"."stg_raw_events"
+where event_time is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:35:23.976308 [debug] [Thread-2 (]: On test.insightflow_dbt.not_null_mart_user_metrics_user_id.122a3b1a5f: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "test.insightflow_dbt.not_null_mart_user_metrics_user_id.122a3b1a5f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select user_id
+from "insightflow"."public"."mart_user_metrics"
+where user_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:35:23.976308 [debug] [Thread-3 (]: Using postgres connection "test.insightflow_dbt.not_null_stg_raw_events_event_id.348d6d9dd0"
+[0m17:35:23.976308 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m17:35:23.976308 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m17:35:23.977667 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m17:35:23.977667 [debug] [Thread-3 (]: On test.insightflow_dbt.not_null_stg_raw_events_event_id.348d6d9dd0: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "test.insightflow_dbt.not_null_stg_raw_events_event_id.348d6d9dd0"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select event_id
+from "insightflow"."public"."stg_raw_events"
+where event_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:35:23.977667 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m17:35:23.992583 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.016 seconds
+[0m17:35:23.992583 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.016 seconds
+[0m17:35:23.996651 [debug] [Thread-1 (]: On test.insightflow_dbt.not_null_mart_daily_metrics_day.d911af4dc6: ROLLBACK
+[0m17:35:23.996651 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.019 seconds
+[0m17:35:23.996651 [debug] [Thread-4 (]: On test.insightflow_dbt.not_null_stg_raw_events_event_time.a86e9fb8b4: ROLLBACK
+[0m17:35:23.999917 [debug] [Thread-3 (]: On test.insightflow_dbt.not_null_stg_raw_events_event_id.348d6d9dd0: ROLLBACK
+[0m17:35:23.999917 [debug] [Thread-1 (]: On test.insightflow_dbt.not_null_mart_daily_metrics_day.d911af4dc6: Close
+[0m17:35:23.999917 [debug] [Thread-3 (]: On test.insightflow_dbt.not_null_stg_raw_events_event_id.348d6d9dd0: Close
+[0m17:35:23.999917 [info ] [Thread-1 (]: 1 of 7 PASS not_null_mart_daily_metrics_day .................................... [[32mPASS[0m in 0.08s]
+[0m17:35:23.999917 [debug] [Thread-4 (]: On test.insightflow_dbt.not_null_stg_raw_events_event_time.a86e9fb8b4: Close
+[0m17:35:23.999917 [debug] [Thread-1 (]: Finished running node test.insightflow_dbt.not_null_mart_daily_metrics_day.d911af4dc6
+[0m17:35:23.999917 [info ] [Thread-3 (]: 3 of 7 PASS not_null_stg_raw_events_event_id ................................... [[32mPASS[0m in 0.08s]
+[0m17:35:24.003932 [debug] [Thread-1 (]: Began running node test.insightflow_dbt.not_null_stg_raw_events_user_id.f7e4d46214
+[0m17:35:24.003932 [info ] [Thread-4 (]: 4 of 7 PASS not_null_stg_raw_events_event_time ................................. [[32mPASS[0m in 0.09s]
+[0m17:35:24.005100 [debug] [Thread-3 (]: Finished running node test.insightflow_dbt.not_null_stg_raw_events_event_id.348d6d9dd0
+[0m17:35:24.006277 [debug] [Thread-4 (]: Finished running node test.insightflow_dbt.not_null_stg_raw_events_event_time.a86e9fb8b4
+[0m17:35:24.005100 [info ] [Thread-1 (]: 5 of 7 START test not_null_stg_raw_events_user_id .............................. [RUN]
+[0m17:35:24.006277 [debug] [Thread-3 (]: Began running node test.insightflow_dbt.unique_mart_daily_metrics_day.93cadc6741
+[0m17:35:24.007236 [debug] [Thread-4 (]: Began running node test.insightflow_dbt.unique_mart_user_metrics_user_id.874d2f68a0
+[0m17:35:24.007802 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.insightflow_dbt.not_null_mart_daily_metrics_day.d911af4dc6, now test.insightflow_dbt.not_null_stg_raw_events_user_id.f7e4d46214)
+[0m17:35:24.007802 [info ] [Thread-3 (]: 6 of 7 START test unique_mart_daily_metrics_day ................................ [RUN]
+[0m17:35:24.008811 [debug] [Thread-1 (]: Began compiling node test.insightflow_dbt.not_null_stg_raw_events_user_id.f7e4d46214
+[0m17:35:24.008811 [info ] [Thread-4 (]: 7 of 7 START test unique_mart_user_metrics_user_id ............................. [RUN]
+[0m17:35:24.008811 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.insightflow_dbt.not_null_stg_raw_events_event_id.348d6d9dd0, now test.insightflow_dbt.unique_mart_daily_metrics_day.93cadc6741)
+[0m17:35:24.013333 [debug] [Thread-1 (]: Writing injected SQL for node "test.insightflow_dbt.not_null_stg_raw_events_user_id.f7e4d46214"
+[0m17:35:24.013333 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.insightflow_dbt.not_null_stg_raw_events_event_time.a86e9fb8b4, now test.insightflow_dbt.unique_mart_user_metrics_user_id.874d2f68a0)
+[0m17:35:24.014328 [debug] [Thread-3 (]: Began compiling node test.insightflow_dbt.unique_mart_daily_metrics_day.93cadc6741
+[0m17:35:24.014328 [debug] [Thread-4 (]: Began compiling node test.insightflow_dbt.unique_mart_user_metrics_user_id.874d2f68a0
+[0m17:35:24.020417 [debug] [Thread-3 (]: Writing injected SQL for node "test.insightflow_dbt.unique_mart_daily_metrics_day.93cadc6741"
+[0m17:35:24.020417 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.043 seconds
+[0m17:35:24.023709 [debug] [Thread-4 (]: Writing injected SQL for node "test.insightflow_dbt.unique_mart_user_metrics_user_id.874d2f68a0"
+[0m17:35:24.025706 [debug] [Thread-2 (]: On test.insightflow_dbt.not_null_mart_user_metrics_user_id.122a3b1a5f: ROLLBACK
+[0m17:35:24.025706 [debug] [Thread-1 (]: Began executing node test.insightflow_dbt.not_null_stg_raw_events_user_id.f7e4d46214
+[0m17:35:24.028707 [debug] [Thread-1 (]: Writing runtime sql for node "test.insightflow_dbt.not_null_stg_raw_events_user_id.f7e4d46214"
+[0m17:35:24.028707 [debug] [Thread-2 (]: On test.insightflow_dbt.not_null_mart_user_metrics_user_id.122a3b1a5f: Close
+[0m17:35:24.030620 [debug] [Thread-4 (]: Began executing node test.insightflow_dbt.unique_mart_user_metrics_user_id.874d2f68a0
+[0m17:35:24.030620 [debug] [Thread-3 (]: Began executing node test.insightflow_dbt.unique_mart_daily_metrics_day.93cadc6741
+[0m17:35:24.029708 [info ] [Thread-2 (]: 2 of 7 PASS not_null_mart_user_metrics_user_id ................................. [[32mPASS[0m in 0.11s]
+[0m17:35:24.033104 [debug] [Thread-4 (]: Writing runtime sql for node "test.insightflow_dbt.unique_mart_user_metrics_user_id.874d2f68a0"
+[0m17:35:24.033104 [debug] [Thread-3 (]: Writing runtime sql for node "test.insightflow_dbt.unique_mart_daily_metrics_day.93cadc6741"
+[0m17:35:24.033104 [debug] [Thread-2 (]: Finished running node test.insightflow_dbt.not_null_mart_user_metrics_user_id.122a3b1a5f
+[0m17:35:24.037811 [debug] [Thread-1 (]: Using postgres connection "test.insightflow_dbt.not_null_stg_raw_events_user_id.f7e4d46214"
+[0m17:35:24.038269 [debug] [Thread-1 (]: On test.insightflow_dbt.not_null_stg_raw_events_user_id.f7e4d46214: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "test.insightflow_dbt.not_null_stg_raw_events_user_id.f7e4d46214"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select user_id
+from "insightflow"."public"."stg_raw_events"
+where user_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:35:24.038269 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:35:24.039287 [debug] [Thread-4 (]: Using postgres connection "test.insightflow_dbt.unique_mart_user_metrics_user_id.874d2f68a0"
+[0m17:35:24.040288 [debug] [Thread-3 (]: Using postgres connection "test.insightflow_dbt.unique_mart_daily_metrics_day.93cadc6741"
+[0m17:35:24.040288 [debug] [Thread-4 (]: On test.insightflow_dbt.unique_mart_user_metrics_user_id.874d2f68a0: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "test.insightflow_dbt.unique_mart_user_metrics_user_id.874d2f68a0"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    user_id as unique_field,
+    count(*) as n_records
+
+from "insightflow"."public"."mart_user_metrics"
+where user_id is not null
+group by user_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:35:24.040793 [debug] [Thread-3 (]: On test.insightflow_dbt.unique_mart_daily_metrics_day.93cadc6741: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "test.insightflow_dbt.unique_mart_daily_metrics_day.93cadc6741"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    day as unique_field,
+    count(*) as n_records
+
+from "insightflow"."public"."mart_daily_metrics"
+where day is not null
+group by day
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:35:24.040793 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m17:35:24.041799 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:35:24.051274 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.014 seconds
+[0m17:35:24.054901 [debug] [Thread-1 (]: On test.insightflow_dbt.not_null_stg_raw_events_user_id.f7e4d46214: ROLLBACK
+[0m17:35:24.054901 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.014 seconds
+[0m17:35:24.054901 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.014 seconds
+[0m17:35:24.056411 [debug] [Thread-4 (]: On test.insightflow_dbt.unique_mart_user_metrics_user_id.874d2f68a0: ROLLBACK
+[0m17:35:24.056411 [debug] [Thread-1 (]: On test.insightflow_dbt.not_null_stg_raw_events_user_id.f7e4d46214: Close
+[0m17:35:24.058592 [debug] [Thread-3 (]: On test.insightflow_dbt.unique_mart_daily_metrics_day.93cadc6741: ROLLBACK
+[0m17:35:24.058592 [debug] [Thread-4 (]: On test.insightflow_dbt.unique_mart_user_metrics_user_id.874d2f68a0: Close
+[0m17:35:24.058592 [info ] [Thread-1 (]: 5 of 7 PASS not_null_stg_raw_events_user_id .................................... [[32mPASS[0m in 0.05s]
+[0m17:35:24.059925 [debug] [Thread-3 (]: On test.insightflow_dbt.unique_mart_daily_metrics_day.93cadc6741: Close
+[0m17:35:24.059925 [debug] [Thread-1 (]: Finished running node test.insightflow_dbt.not_null_stg_raw_events_user_id.f7e4d46214
+[0m17:35:24.061433 [info ] [Thread-4 (]: 7 of 7 PASS unique_mart_user_metrics_user_id ................................... [[32mPASS[0m in 0.05s]
+[0m17:35:24.062552 [debug] [Thread-4 (]: Finished running node test.insightflow_dbt.unique_mart_user_metrics_user_id.874d2f68a0
+[0m17:35:24.061433 [info ] [Thread-3 (]: 6 of 7 PASS unique_mart_daily_metrics_day ...................................... [[32mPASS[0m in 0.05s]
+[0m17:35:24.063575 [debug] [Thread-3 (]: Finished running node test.insightflow_dbt.unique_mart_daily_metrics_day.93cadc6741
+[0m17:35:24.065240 [debug] [MainThread]: On master: COMMIT
+[0m17:35:24.065240 [debug] [MainThread]: Using postgres connection "master"
+[0m17:35:24.065240 [debug] [MainThread]: On master: COMMIT
+[0m17:35:24.065240 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:35:24.095018 [debug] [MainThread]: SQL status: COMMIT in 0.029 seconds
+[0m17:35:24.096018 [debug] [MainThread]: On master: Close
+[0m17:35:24.096018 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:35:24.097038 [debug] [MainThread]: Connection 'list_insightflow_public' was properly closed.
+[0m17:35:24.097038 [debug] [MainThread]: Connection 'test.insightflow_dbt.not_null_stg_raw_events_user_id.f7e4d46214' was properly closed.
+[0m17:35:24.097038 [debug] [MainThread]: Connection 'test.insightflow_dbt.not_null_mart_user_metrics_user_id.122a3b1a5f' was properly closed.
+[0m17:35:24.098031 [debug] [MainThread]: Connection 'test.insightflow_dbt.unique_mart_daily_metrics_day.93cadc6741' was properly closed.
+[0m17:35:24.098031 [debug] [MainThread]: Connection 'test.insightflow_dbt.unique_mart_user_metrics_user_id.874d2f68a0' was properly closed.
+[0m17:35:24.098031 [info ] [MainThread]: 
+[0m17:35:24.098031 [info ] [MainThread]: Finished running 7 data tests in 0 hours 0 minutes and 0.37 seconds (0.37s).
+[0m17:35:24.098031 [debug] [MainThread]: Command end result
+[0m17:35:24.116836 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\marin\OneDrive\Desktop\InsightFlow\dbt_project\target\manifest.json
+[0m17:35:24.121596 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\marin\OneDrive\Desktop\InsightFlow\dbt_project\target\semantic_manifest.json
+[0m17:35:24.128060 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\marin\OneDrive\Desktop\InsightFlow\dbt_project\target\run_results.json
+[0m17:35:24.128060 [info ] [MainThread]: 
+[0m17:35:24.129058 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:35:24.129058 [info ] [MainThread]: 
+[0m17:35:24.130066 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=7
+[0m17:35:24.130790 [debug] [MainThread]: Command `dbt test` succeeded at 17:35:24.130790 after 1.32 seconds
+[0m17:35:24.130790 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AB6D7196A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AB6F6C2BA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AB6D7C3AA0>]}
+[0m17:35:24.130790 [debug] [MainThread]: Flushing usage events
+[0m17:35:25.159894 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:45:18.638290 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000177F7D97FB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000177F76B9E80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000177F76B9E20>]}
+
+
+============================== 17:45:18.645049 | 9473f5b0-c86a-4a99-a809-36c22a693447 ==============================
+[0m17:45:18.645049 [info ] [MainThread]: Running with dbt=1.11.7
+[0m17:45:18.646098 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'invocation_command': 'dbt run --profiles-dir .', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\marin\\OneDrive\\Desktop\\InsightFlow\\dbt_project\\logs'}
+[0m17:45:18.825084 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9473f5b0-c86a-4a99-a809-36c22a693447', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000177F9462AB0>]}
+[0m17:45:18.882009 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9473f5b0-c86a-4a99-a809-36c22a693447', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000177F7654C20>]}
+[0m17:45:18.883058 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m17:45:19.183689 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m17:45:19.323128 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:45:19.324127 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m17:45:19.324127 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:45:19.354253 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9473f5b0-c86a-4a99-a809-36c22a693447', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000177F99815B0>]}
+[0m17:45:19.414358 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\marin\OneDrive\Desktop\InsightFlow\dbt_project\target\manifest.json
+[0m17:45:19.416880 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\marin\OneDrive\Desktop\InsightFlow\dbt_project\target\semantic_manifest.json
+[0m17:45:19.446806 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9473f5b0-c86a-4a99-a809-36c22a693447', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000177F9A259D0>]}
+[0m17:45:19.446806 [info ] [MainThread]: Found 3 models, 7 data tests, 464 macros
+[0m17:45:19.446806 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9473f5b0-c86a-4a99-a809-36c22a693447', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000177F9ABAA50>]}
+[0m17:45:19.456902 [info ] [MainThread]: 
+[0m17:45:19.456902 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:45:19.458915 [info ] [MainThread]: 
+[0m17:45:19.459458 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:45:19.463411 [debug] [ThreadPool]: Acquiring new postgres connection 'list_insightflow'
+[0m17:45:19.587201 [debug] [ThreadPool]: Using postgres connection "list_insightflow"
+[0m17:45:19.587720 [debug] [ThreadPool]: On list_insightflow: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "connection_name": "list_insightflow"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m17:45:19.587720 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:45:19.621941 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.035 seconds
+[0m17:45:19.623988 [debug] [ThreadPool]: On list_insightflow: Close
+[0m17:45:19.626116 [debug] [ThreadPool]: Acquiring new postgres connection 'list_insightflow_public'
+[0m17:45:19.631386 [debug] [ThreadPool]: Using postgres connection "list_insightflow_public"
+[0m17:45:19.631386 [debug] [ThreadPool]: On list_insightflow_public: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "connection_name": "list_insightflow_public"} */
+select
+      'insightflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'insightflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'insightflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m17:45:19.631386 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:45:19.673340 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.042 seconds
+[0m17:45:19.675410 [debug] [ThreadPool]: On list_insightflow_public: ROLLBACK
+[0m17:45:19.675951 [debug] [ThreadPool]: On list_insightflow_public: Close
+[0m17:45:19.681571 [debug] [MainThread]: Using postgres connection "master"
+[0m17:45:19.682580 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m17:45:19.682580 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:45:19.718899 [debug] [MainThread]: SQL status: SELECT 1 in 0.036 seconds
+[0m17:45:19.720418 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9473f5b0-c86a-4a99-a809-36c22a693447', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000177F9B5F230>]}
+[0m17:45:19.720418 [debug] [MainThread]: On master: ROLLBACK
+[0m17:45:19.721417 [debug] [MainThread]: On master: COMMIT
+[0m17:45:19.721417 [debug] [MainThread]: Using postgres connection "master"
+[0m17:45:19.721417 [debug] [MainThread]: On master: COMMIT
+[0m17:45:19.722418 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m17:45:19.722418 [debug] [MainThread]: On master: Close
+[0m17:45:19.728687 [debug] [Thread-1 (]: Began running node model.insightflow_dbt.stg_raw_events
+[0m17:45:19.729725 [info ] [Thread-1 (]: 1 of 3 START sql view model public.stg_raw_events .............................. [RUN]
+[0m17:45:19.730243 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.insightflow_dbt.stg_raw_events'
+[0m17:45:19.730759 [debug] [Thread-1 (]: Began compiling node model.insightflow_dbt.stg_raw_events
+[0m17:45:19.735958 [debug] [Thread-1 (]: Writing injected SQL for node "model.insightflow_dbt.stg_raw_events"
+[0m17:45:19.736997 [debug] [Thread-1 (]: Began executing node model.insightflow_dbt.stg_raw_events
+[0m17:45:19.766185 [debug] [Thread-1 (]: Writing runtime sql for node "model.insightflow_dbt.stg_raw_events"
+[0m17:45:19.767699 [debug] [Thread-1 (]: Using postgres connection "model.insightflow_dbt.stg_raw_events"
+[0m17:45:19.767699 [debug] [Thread-1 (]: On model.insightflow_dbt.stg_raw_events: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "model.insightflow_dbt.stg_raw_events"} */
+
+  create view "insightflow"."public"."stg_raw_events__dbt_tmp"
+    
+    
+  as (
+    SELECT
+    event_id,
+    issue_number,
+    user_id,
+    user_login,
+    session_id,
+    event_type,
+    feature_used,
+    event_time,
+    source
+FROM raw_events
+  );
+[0m17:45:19.767699 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m17:45:19.789972 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.021 seconds
+[0m17:45:19.794934 [debug] [Thread-1 (]: Using postgres connection "model.insightflow_dbt.stg_raw_events"
+[0m17:45:19.794934 [debug] [Thread-1 (]: On model.insightflow_dbt.stg_raw_events: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "model.insightflow_dbt.stg_raw_events"} */
+alter table "insightflow"."public"."stg_raw_events" rename to "stg_raw_events__dbt_backup"
+[0m17:45:19.798499 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m17:45:19.799577 [debug] [Thread-1 (]: Using postgres connection "model.insightflow_dbt.stg_raw_events"
+[0m17:45:19.799577 [debug] [Thread-1 (]: On model.insightflow_dbt.stg_raw_events: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "model.insightflow_dbt.stg_raw_events"} */
+alter table "insightflow"."public"."stg_raw_events__dbt_tmp" rename to "stg_raw_events"
+[0m17:45:19.799577 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m17:45:19.810709 [debug] [Thread-1 (]: On model.insightflow_dbt.stg_raw_events: COMMIT
+[0m17:45:19.810709 [debug] [Thread-1 (]: Using postgres connection "model.insightflow_dbt.stg_raw_events"
+[0m17:45:19.810709 [debug] [Thread-1 (]: On model.insightflow_dbt.stg_raw_events: COMMIT
+[0m17:45:19.810709 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m17:45:19.818937 [debug] [Thread-1 (]: Applying DROP to: "insightflow"."public"."stg_raw_events__dbt_backup"
+[0m17:45:19.828438 [debug] [Thread-1 (]: Using postgres connection "model.insightflow_dbt.stg_raw_events"
+[0m17:45:19.828438 [debug] [Thread-1 (]: On model.insightflow_dbt.stg_raw_events: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "model.insightflow_dbt.stg_raw_events"} */
+drop view if exists "insightflow"."public"."stg_raw_events__dbt_backup" cascade
+[0m17:45:19.831044 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m17:45:19.833689 [debug] [Thread-1 (]: On model.insightflow_dbt.stg_raw_events: Close
+[0m17:45:19.836368 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9473f5b0-c86a-4a99-a809-36c22a693447', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000177F5051340>]}
+[0m17:45:19.837432 [info ] [Thread-1 (]: 1 of 3 OK created sql view model public.stg_raw_events ......................... [[32mCREATE VIEW[0m in 0.10s]
+[0m17:45:19.837432 [debug] [Thread-1 (]: Finished running node model.insightflow_dbt.stg_raw_events
+[0m17:45:19.837432 [debug] [Thread-3 (]: Began running node model.insightflow_dbt.mart_daily_metrics
+[0m17:45:19.837432 [debug] [Thread-4 (]: Began running node model.insightflow_dbt.mart_user_metrics
+[0m17:45:19.839944 [info ] [Thread-3 (]: 2 of 3 START sql table model public.mart_daily_metrics ......................... [RUN]
+[0m17:45:19.839944 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.insightflow_dbt.mart_daily_metrics'
+[0m17:45:19.839944 [info ] [Thread-4 (]: 3 of 3 START sql table model public.mart_user_metrics .......................... [RUN]
+[0m17:45:19.839944 [debug] [Thread-3 (]: Began compiling node model.insightflow_dbt.mart_daily_metrics
+[0m17:45:19.841827 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.insightflow_dbt.mart_user_metrics'
+[0m17:45:19.844672 [debug] [Thread-3 (]: Writing injected SQL for node "model.insightflow_dbt.mart_daily_metrics"
+[0m17:45:19.844672 [debug] [Thread-4 (]: Began compiling node model.insightflow_dbt.mart_user_metrics
+[0m17:45:19.847897 [debug] [Thread-4 (]: Writing injected SQL for node "model.insightflow_dbt.mart_user_metrics"
+[0m17:45:19.848940 [debug] [Thread-3 (]: Began executing node model.insightflow_dbt.mart_daily_metrics
+[0m17:45:19.849462 [debug] [Thread-4 (]: Began executing node model.insightflow_dbt.mart_user_metrics
+[0m17:45:19.870155 [debug] [Thread-3 (]: Writing runtime sql for node "model.insightflow_dbt.mart_daily_metrics"
+[0m17:45:19.873080 [debug] [Thread-4 (]: Writing runtime sql for node "model.insightflow_dbt.mart_user_metrics"
+[0m17:45:19.874544 [debug] [Thread-4 (]: Using postgres connection "model.insightflow_dbt.mart_user_metrics"
+[0m17:45:19.874544 [debug] [Thread-3 (]: Using postgres connection "model.insightflow_dbt.mart_daily_metrics"
+[0m17:45:19.876183 [debug] [Thread-4 (]: On model.insightflow_dbt.mart_user_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "model.insightflow_dbt.mart_user_metrics"} */
+
+  
+    
+
+  create  table "insightflow"."public"."mart_user_metrics__dbt_tmp"
+  
+  
+    as
+  
+  (
+    SELECT
+    user_id,
+    MIN(event_time)::date AS first_seen_date,
+    MAX(event_time)::date AS last_seen_date,
+    COUNT(*) AS total_events,
+    COUNT(DISTINCT session_id) AS sessions,
+    COUNT(DISTINCT DATE(event_time)) AS active_days
+FROM "insightflow"."public"."stg_raw_events"
+GROUP BY user_id
+  );
+  
+[0m17:45:19.876183 [debug] [Thread-3 (]: On model.insightflow_dbt.mart_daily_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "model.insightflow_dbt.mart_daily_metrics"} */
+
+  
+    
+
+  create  table "insightflow"."public"."mart_daily_metrics__dbt_tmp"
+  
+  
+    as
+  
+  (
+    SELECT
+    DATE(event_time) AS day,
+    COUNT(*) AS events,
+    COUNT(DISTINCT user_id) AS dau,
+    COUNT(DISTINCT session_id) AS sessions,
+    COUNT(DISTINCT CASE WHEN event_type = 'issue_closed' THEN user_id END) AS users_closed_issues
+FROM "insightflow"."public"."stg_raw_events"
+GROUP BY DATE(event_time)
+  );
+  
+[0m17:45:19.876183 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m17:45:19.877410 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m17:45:19.893504 [debug] [Thread-3 (]: SQL status: SELECT 4 in 0.016 seconds
+[0m17:45:19.894713 [debug] [Thread-4 (]: SQL status: SELECT 92 in 0.017 seconds
+[0m17:45:19.898895 [debug] [Thread-3 (]: Using postgres connection "model.insightflow_dbt.mart_daily_metrics"
+[0m17:45:19.902409 [debug] [Thread-4 (]: Using postgres connection "model.insightflow_dbt.mart_user_metrics"
+[0m17:45:19.902409 [debug] [Thread-3 (]: On model.insightflow_dbt.mart_daily_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "model.insightflow_dbt.mart_daily_metrics"} */
+alter table "insightflow"."public"."mart_daily_metrics" rename to "mart_daily_metrics__dbt_backup"
+[0m17:45:19.902409 [debug] [Thread-4 (]: On model.insightflow_dbt.mart_user_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "model.insightflow_dbt.mart_user_metrics"} */
+alter table "insightflow"."public"."mart_user_metrics" rename to "mart_user_metrics__dbt_backup"
+[0m17:45:19.902409 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m17:45:19.902409 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m17:45:19.902409 [debug] [Thread-3 (]: Using postgres connection "model.insightflow_dbt.mart_daily_metrics"
+[0m17:45:19.910264 [debug] [Thread-4 (]: Using postgres connection "model.insightflow_dbt.mart_user_metrics"
+[0m17:45:19.911249 [debug] [Thread-3 (]: On model.insightflow_dbt.mart_daily_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "model.insightflow_dbt.mart_daily_metrics"} */
+alter table "insightflow"."public"."mart_daily_metrics__dbt_tmp" rename to "mart_daily_metrics"
+[0m17:45:19.911904 [debug] [Thread-4 (]: On model.insightflow_dbt.mart_user_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "model.insightflow_dbt.mart_user_metrics"} */
+alter table "insightflow"."public"."mart_user_metrics__dbt_tmp" rename to "mart_user_metrics"
+[0m17:45:19.912916 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m17:45:19.912916 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m17:45:19.914483 [debug] [Thread-4 (]: On model.insightflow_dbt.mart_user_metrics: COMMIT
+[0m17:45:19.915987 [debug] [Thread-3 (]: On model.insightflow_dbt.mart_daily_metrics: COMMIT
+[0m17:45:19.916992 [debug] [Thread-4 (]: Using postgres connection "model.insightflow_dbt.mart_user_metrics"
+[0m17:45:19.916992 [debug] [Thread-3 (]: Using postgres connection "model.insightflow_dbt.mart_daily_metrics"
+[0m17:45:19.916992 [debug] [Thread-4 (]: On model.insightflow_dbt.mart_user_metrics: COMMIT
+[0m17:45:19.917992 [debug] [Thread-3 (]: On model.insightflow_dbt.mart_daily_metrics: COMMIT
+[0m17:45:19.919766 [debug] [Thread-3 (]: SQL status: COMMIT in 0.001 seconds
+[0m17:45:19.921773 [debug] [Thread-3 (]: Applying DROP to: "insightflow"."public"."mart_daily_metrics__dbt_backup"
+[0m17:45:19.921773 [debug] [Thread-4 (]: SQL status: COMMIT in 0.004 seconds
+[0m17:45:19.924827 [debug] [Thread-3 (]: Using postgres connection "model.insightflow_dbt.mart_daily_metrics"
+[0m17:45:19.927281 [debug] [Thread-4 (]: Applying DROP to: "insightflow"."public"."mart_user_metrics__dbt_backup"
+[0m17:45:19.927281 [debug] [Thread-3 (]: On model.insightflow_dbt.mart_daily_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "model.insightflow_dbt.mart_daily_metrics"} */
+drop table if exists "insightflow"."public"."mart_daily_metrics__dbt_backup" cascade
+[0m17:45:19.928321 [debug] [Thread-4 (]: Using postgres connection "model.insightflow_dbt.mart_user_metrics"
+[0m17:45:19.928321 [debug] [Thread-4 (]: On model.insightflow_dbt.mart_user_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "model.insightflow_dbt.mart_user_metrics"} */
+drop table if exists "insightflow"."public"."mart_user_metrics__dbt_backup" cascade
+[0m17:45:19.930321 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m17:45:19.932324 [debug] [Thread-3 (]: On model.insightflow_dbt.mart_daily_metrics: Close
+[0m17:45:19.932324 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.003 seconds
+[0m17:45:19.933321 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9473f5b0-c86a-4a99-a809-36c22a693447', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000177F9FFC5F0>]}
+[0m17:45:19.934390 [debug] [Thread-4 (]: On model.insightflow_dbt.mart_user_metrics: Close
+[0m17:45:19.934390 [info ] [Thread-3 (]: 2 of 3 OK created sql table model public.mart_daily_metrics .................... [[32mSELECT 4[0m in 0.09s]
+[0m17:45:19.935490 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9473f5b0-c86a-4a99-a809-36c22a693447', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000177FA3C4B90>]}
+[0m17:45:19.935490 [debug] [Thread-3 (]: Finished running node model.insightflow_dbt.mart_daily_metrics
+[0m17:45:19.936563 [info ] [Thread-4 (]: 3 of 3 OK created sql table model public.mart_user_metrics ..................... [[32mSELECT 92[0m in 0.10s]
+[0m17:45:19.936563 [debug] [Thread-4 (]: Finished running node model.insightflow_dbt.mart_user_metrics
+[0m17:45:19.938004 [debug] [MainThread]: On master: COMMIT
+[0m17:45:19.939031 [debug] [MainThread]: Using postgres connection "master"
+[0m17:45:19.939031 [debug] [MainThread]: On master: COMMIT
+[0m17:45:19.939031 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:45:19.960040 [debug] [MainThread]: SQL status: COMMIT in 0.021 seconds
+[0m17:45:19.961274 [debug] [MainThread]: On master: Close
+[0m17:45:19.961274 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:45:19.962275 [debug] [MainThread]: Connection 'list_insightflow' was properly closed.
+[0m17:45:19.962275 [debug] [MainThread]: Connection 'list_insightflow_public' was properly closed.
+[0m17:45:19.962275 [debug] [MainThread]: Connection 'model.insightflow_dbt.stg_raw_events' was properly closed.
+[0m17:45:19.962275 [debug] [MainThread]: Connection 'model.insightflow_dbt.mart_daily_metrics' was properly closed.
+[0m17:45:19.962275 [debug] [MainThread]: Connection 'model.insightflow_dbt.mart_user_metrics' was properly closed.
+[0m17:45:19.962275 [info ] [MainThread]: 
+[0m17:45:19.963782 [info ] [MainThread]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 0.50 seconds (0.50s).
+[0m17:45:19.964792 [debug] [MainThread]: Command end result
+[0m17:45:19.984375 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\marin\OneDrive\Desktop\InsightFlow\dbt_project\target\manifest.json
+[0m17:45:19.986469 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\marin\OneDrive\Desktop\InsightFlow\dbt_project\target\semantic_manifest.json
+[0m17:45:19.990924 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\marin\OneDrive\Desktop\InsightFlow\dbt_project\target\run_results.json
+[0m17:45:19.990924 [info ] [MainThread]: 
+[0m17:45:19.990924 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:45:19.990924 [info ] [MainThread]: 
+[0m17:45:19.993668 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m17:45:19.994743 [debug] [MainThread]: Command `dbt run` succeeded at 17:45:19.994743 after 1.47 seconds
+[0m17:45:19.994743 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000177F8174080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000177F8175220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000177F5C1DB20>]}
+[0m17:45:19.995763 [debug] [MainThread]: Flushing usage events
+[0m17:45:21.515708 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:45:40.660553 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0E9809A60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0E9249430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0E980A2D0>]}
+
+
+============================== 17:45:40.667336 | 802fd4e4-06ee-4063-82b2-ff8182bc1584 ==============================
+[0m17:45:40.667336 [info ] [MainThread]: Running with dbt=1.11.7
+[0m17:45:40.668336 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt test --profiles-dir .', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\marin\\OneDrive\\Desktop\\InsightFlow\\dbt_project\\logs'}
+[0m17:45:40.837572 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '802fd4e4-06ee-4063-82b2-ff8182bc1584', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0EAF1F590>]}
+[0m17:45:40.897189 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '802fd4e4-06ee-4063-82b2-ff8182bc1584', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0EB028470>]}
+[0m17:45:40.899043 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m17:45:41.188337 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m17:45:41.306112 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:45:41.306112 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m17:45:41.306112 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:45:41.340330 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '802fd4e4-06ee-4063-82b2-ff8182bc1584', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0EB028890>]}
+[0m17:45:41.402315 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\marin\OneDrive\Desktop\InsightFlow\dbt_project\target\manifest.json
+[0m17:45:41.404913 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\marin\OneDrive\Desktop\InsightFlow\dbt_project\target\semantic_manifest.json
+[0m17:45:41.454555 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '802fd4e4-06ee-4063-82b2-ff8182bc1584', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0EB49A540>]}
+[0m17:45:41.454555 [info ] [MainThread]: Found 3 models, 7 data tests, 464 macros
+[0m17:45:41.454555 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '802fd4e4-06ee-4063-82b2-ff8182bc1584', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0E992A420>]}
+[0m17:45:41.454555 [info ] [MainThread]: 
+[0m17:45:41.454555 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:45:41.454555 [info ] [MainThread]: 
+[0m17:45:41.454555 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:45:41.461081 [debug] [ThreadPool]: Acquiring new postgres connection 'list_insightflow_public'
+[0m17:45:41.554460 [debug] [ThreadPool]: Using postgres connection "list_insightflow_public"
+[0m17:45:41.554988 [debug] [ThreadPool]: On list_insightflow_public: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "connection_name": "list_insightflow_public"} */
+select
+      'insightflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'insightflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'insightflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m17:45:41.555491 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:45:41.575710 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.021 seconds
+[0m17:45:41.577893 [debug] [ThreadPool]: On list_insightflow_public: ROLLBACK
+[0m17:45:41.578911 [debug] [ThreadPool]: On list_insightflow_public: Close
+[0m17:45:41.584005 [debug] [MainThread]: Using postgres connection "master"
+[0m17:45:41.584520 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m17:45:41.585070 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:45:41.598816 [debug] [MainThread]: SQL status: SELECT 1 in 0.014 seconds
+[0m17:45:41.600414 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '802fd4e4-06ee-4063-82b2-ff8182bc1584', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0E68B9850>]}
+[0m17:45:41.600948 [debug] [MainThread]: On master: ROLLBACK
+[0m17:45:41.602004 [debug] [MainThread]: On master: COMMIT
+[0m17:45:41.602532 [debug] [MainThread]: Using postgres connection "master"
+[0m17:45:41.602532 [debug] [MainThread]: On master: COMMIT
+[0m17:45:41.603602 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m17:45:41.604123 [debug] [MainThread]: On master: Close
+[0m17:45:41.607818 [debug] [Thread-1 (]: Began running node test.insightflow_dbt.not_null_mart_daily_metrics_day.d911af4dc6
+[0m17:45:41.608816 [debug] [Thread-2 (]: Began running node test.insightflow_dbt.not_null_mart_user_metrics_user_id.122a3b1a5f
+[0m17:45:41.608816 [debug] [Thread-3 (]: Began running node test.insightflow_dbt.not_null_stg_raw_events_event_id.348d6d9dd0
+[0m17:45:41.610321 [debug] [Thread-4 (]: Began running node test.insightflow_dbt.not_null_stg_raw_events_event_time.a86e9fb8b4
+[0m17:45:41.608816 [info ] [Thread-1 (]: 1 of 7 START test not_null_mart_daily_metrics_day .............................. [RUN]
+[0m17:45:41.610321 [info ] [Thread-2 (]: 2 of 7 START test not_null_mart_user_metrics_user_id ........................... [RUN]
+[0m17:45:41.612040 [debug] [Thread-1 (]: Acquiring new postgres connection 'test.insightflow_dbt.not_null_mart_daily_metrics_day.d911af4dc6'
+[0m17:45:41.611032 [info ] [Thread-3 (]: 3 of 7 START test not_null_stg_raw_events_event_id ............................. [RUN]
+[0m17:45:41.612040 [debug] [Thread-2 (]: Acquiring new postgres connection 'test.insightflow_dbt.not_null_mart_user_metrics_user_id.122a3b1a5f'
+[0m17:45:41.612040 [debug] [Thread-1 (]: Began compiling node test.insightflow_dbt.not_null_mart_daily_metrics_day.d911af4dc6
+[0m17:45:41.611032 [info ] [Thread-4 (]: 4 of 7 START test not_null_stg_raw_events_event_time ........................... [RUN]
+[0m17:45:41.613163 [debug] [Thread-3 (]: Acquiring new postgres connection 'test.insightflow_dbt.not_null_stg_raw_events_event_id.348d6d9dd0'
+[0m17:45:41.613163 [debug] [Thread-2 (]: Began compiling node test.insightflow_dbt.not_null_mart_user_metrics_user_id.122a3b1a5f
+[0m17:45:41.628620 [debug] [Thread-1 (]: Writing injected SQL for node "test.insightflow_dbt.not_null_mart_daily_metrics_day.d911af4dc6"
+[0m17:45:41.629141 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.insightflow_dbt.not_null_stg_raw_events_event_time.a86e9fb8b4'
+[0m17:45:41.629663 [debug] [Thread-3 (]: Began compiling node test.insightflow_dbt.not_null_stg_raw_events_event_id.348d6d9dd0
+[0m17:45:41.633671 [debug] [Thread-2 (]: Writing injected SQL for node "test.insightflow_dbt.not_null_mart_user_metrics_user_id.122a3b1a5f"
+[0m17:45:41.634423 [debug] [Thread-4 (]: Began compiling node test.insightflow_dbt.not_null_stg_raw_events_event_time.a86e9fb8b4
+[0m17:45:41.637570 [debug] [Thread-3 (]: Writing injected SQL for node "test.insightflow_dbt.not_null_stg_raw_events_event_id.348d6d9dd0"
+[0m17:45:41.643254 [debug] [Thread-4 (]: Writing injected SQL for node "test.insightflow_dbt.not_null_stg_raw_events_event_time.a86e9fb8b4"
+[0m17:45:41.643813 [debug] [Thread-1 (]: Began executing node test.insightflow_dbt.not_null_mart_daily_metrics_day.d911af4dc6
+[0m17:45:41.662589 [debug] [Thread-1 (]: Writing runtime sql for node "test.insightflow_dbt.not_null_mart_daily_metrics_day.d911af4dc6"
+[0m17:45:41.663439 [debug] [Thread-2 (]: Began executing node test.insightflow_dbt.not_null_mart_user_metrics_user_id.122a3b1a5f
+[0m17:45:41.663960 [debug] [Thread-3 (]: Began executing node test.insightflow_dbt.not_null_stg_raw_events_event_id.348d6d9dd0
+[0m17:45:41.664490 [debug] [Thread-4 (]: Began executing node test.insightflow_dbt.not_null_stg_raw_events_event_time.a86e9fb8b4
+[0m17:45:41.666563 [debug] [Thread-2 (]: Writing runtime sql for node "test.insightflow_dbt.not_null_mart_user_metrics_user_id.122a3b1a5f"
+[0m17:45:41.668685 [debug] [Thread-3 (]: Writing runtime sql for node "test.insightflow_dbt.not_null_stg_raw_events_event_id.348d6d9dd0"
+[0m17:45:41.670257 [debug] [Thread-4 (]: Writing runtime sql for node "test.insightflow_dbt.not_null_stg_raw_events_event_time.a86e9fb8b4"
+[0m17:45:41.670257 [debug] [Thread-1 (]: Using postgres connection "test.insightflow_dbt.not_null_mart_daily_metrics_day.d911af4dc6"
+[0m17:45:41.670257 [debug] [Thread-1 (]: On test.insightflow_dbt.not_null_mart_daily_metrics_day.d911af4dc6: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "test.insightflow_dbt.not_null_mart_daily_metrics_day.d911af4dc6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select day
+from "insightflow"."public"."mart_daily_metrics"
+where day is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:45:41.672330 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m17:45:41.672330 [debug] [Thread-2 (]: Using postgres connection "test.insightflow_dbt.not_null_mart_user_metrics_user_id.122a3b1a5f"
+[0m17:45:41.673295 [debug] [Thread-3 (]: Using postgres connection "test.insightflow_dbt.not_null_stg_raw_events_event_id.348d6d9dd0"
+[0m17:45:41.673800 [debug] [Thread-2 (]: On test.insightflow_dbt.not_null_mart_user_metrics_user_id.122a3b1a5f: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "test.insightflow_dbt.not_null_mart_user_metrics_user_id.122a3b1a5f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select user_id
+from "insightflow"."public"."mart_user_metrics"
+where user_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:45:41.673800 [debug] [Thread-4 (]: Using postgres connection "test.insightflow_dbt.not_null_stg_raw_events_event_time.a86e9fb8b4"
+[0m17:45:41.674512 [debug] [Thread-3 (]: On test.insightflow_dbt.not_null_stg_raw_events_event_id.348d6d9dd0: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "test.insightflow_dbt.not_null_stg_raw_events_event_id.348d6d9dd0"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select event_id
+from "insightflow"."public"."stg_raw_events"
+where event_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:45:41.674512 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m17:45:41.674512 [debug] [Thread-4 (]: On test.insightflow_dbt.not_null_stg_raw_events_event_time.a86e9fb8b4: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "test.insightflow_dbt.not_null_stg_raw_events_event_time.a86e9fb8b4"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select event_time
+from "insightflow"."public"."stg_raw_events"
+where event_time is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:45:41.674512 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m17:45:41.674512 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m17:45:41.685953 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.013 seconds
+[0m17:45:41.689398 [debug] [Thread-1 (]: On test.insightflow_dbt.not_null_mart_daily_metrics_day.d911af4dc6: ROLLBACK
+[0m17:45:41.689398 [debug] [Thread-1 (]: On test.insightflow_dbt.not_null_mart_daily_metrics_day.d911af4dc6: Close
+[0m17:45:41.691886 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.017 seconds
+[0m17:45:41.691212 [info ] [Thread-1 (]: 1 of 7 PASS not_null_mart_daily_metrics_day .................................... [[32mPASS[0m in 0.08s]
+[0m17:45:41.692393 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.016 seconds
+[0m17:45:41.693916 [debug] [Thread-2 (]: On test.insightflow_dbt.not_null_mart_user_metrics_user_id.122a3b1a5f: ROLLBACK
+[0m17:45:41.694577 [debug] [Thread-1 (]: Finished running node test.insightflow_dbt.not_null_mart_daily_metrics_day.d911af4dc6
+[0m17:45:41.696153 [debug] [Thread-4 (]: On test.insightflow_dbt.not_null_stg_raw_events_event_time.a86e9fb8b4: ROLLBACK
+[0m17:45:41.696153 [debug] [Thread-1 (]: Began running node test.insightflow_dbt.not_null_stg_raw_events_user_id.f7e4d46214
+[0m17:45:41.696674 [debug] [Thread-2 (]: On test.insightflow_dbt.not_null_mart_user_metrics_user_id.122a3b1a5f: Close
+[0m17:45:41.697708 [debug] [Thread-4 (]: On test.insightflow_dbt.not_null_stg_raw_events_event_time.a86e9fb8b4: Close
+[0m17:45:41.697195 [info ] [Thread-1 (]: 5 of 7 START test not_null_stg_raw_events_user_id .............................. [RUN]
+[0m17:45:41.698763 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.insightflow_dbt.not_null_mart_daily_metrics_day.d911af4dc6, now test.insightflow_dbt.not_null_stg_raw_events_user_id.f7e4d46214)
+[0m17:45:41.698240 [info ] [Thread-2 (]: 2 of 7 PASS not_null_mart_user_metrics_user_id ................................. [[32mPASS[0m in 0.09s]
+[0m17:45:41.699819 [debug] [Thread-1 (]: Began compiling node test.insightflow_dbt.not_null_stg_raw_events_user_id.f7e4d46214
+[0m17:45:41.700877 [debug] [Thread-2 (]: Finished running node test.insightflow_dbt.not_null_mart_user_metrics_user_id.122a3b1a5f
+[0m17:45:41.700348 [info ] [Thread-4 (]: 4 of 7 PASS not_null_stg_raw_events_event_time ................................. [[32mPASS[0m in 0.07s]
+[0m17:45:41.705084 [debug] [Thread-1 (]: Writing injected SQL for node "test.insightflow_dbt.not_null_stg_raw_events_user_id.f7e4d46214"
+[0m17:45:41.705602 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.030 seconds
+[0m17:45:41.705602 [debug] [Thread-2 (]: Began running node test.insightflow_dbt.unique_mart_daily_metrics_day.93cadc6741
+[0m17:45:41.706643 [debug] [Thread-4 (]: Finished running node test.insightflow_dbt.not_null_stg_raw_events_event_time.a86e9fb8b4
+[0m17:45:41.707725 [debug] [Thread-3 (]: On test.insightflow_dbt.not_null_stg_raw_events_event_id.348d6d9dd0: ROLLBACK
+[0m17:45:41.708765 [debug] [Thread-4 (]: Began running node test.insightflow_dbt.unique_mart_user_metrics_user_id.874d2f68a0
+[0m17:45:41.708235 [info ] [Thread-2 (]: 6 of 7 START test unique_mart_daily_metrics_day ................................ [RUN]
+[0m17:45:41.709294 [debug] [Thread-1 (]: Began executing node test.insightflow_dbt.not_null_stg_raw_events_user_id.f7e4d46214
+[0m17:45:41.709823 [debug] [Thread-3 (]: On test.insightflow_dbt.not_null_stg_raw_events_event_id.348d6d9dd0: Close
+[0m17:45:41.710344 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.insightflow_dbt.not_null_mart_user_metrics_user_id.122a3b1a5f, now test.insightflow_dbt.unique_mart_daily_metrics_day.93cadc6741)
+[0m17:45:41.709823 [info ] [Thread-4 (]: 7 of 7 START test unique_mart_user_metrics_user_id ............................. [RUN]
+[0m17:45:41.713108 [debug] [Thread-1 (]: Writing runtime sql for node "test.insightflow_dbt.not_null_stg_raw_events_user_id.f7e4d46214"
+[0m17:45:41.714111 [debug] [Thread-2 (]: Began compiling node test.insightflow_dbt.unique_mart_daily_metrics_day.93cadc6741
+[0m17:45:41.714111 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.insightflow_dbt.not_null_stg_raw_events_event_time.a86e9fb8b4, now test.insightflow_dbt.unique_mart_user_metrics_user_id.874d2f68a0)
+[0m17:45:41.714111 [info ] [Thread-3 (]: 3 of 7 PASS not_null_stg_raw_events_event_id ................................... [[32mPASS[0m in 0.10s]
+[0m17:45:41.721670 [debug] [Thread-2 (]: Writing injected SQL for node "test.insightflow_dbt.unique_mart_daily_metrics_day.93cadc6741"
+[0m17:45:41.722256 [debug] [Thread-4 (]: Began compiling node test.insightflow_dbt.unique_mart_user_metrics_user_id.874d2f68a0
+[0m17:45:41.723268 [debug] [Thread-3 (]: Finished running node test.insightflow_dbt.not_null_stg_raw_events_event_id.348d6d9dd0
+[0m17:45:41.723268 [debug] [Thread-1 (]: Using postgres connection "test.insightflow_dbt.not_null_stg_raw_events_user_id.f7e4d46214"
+[0m17:45:41.728216 [debug] [Thread-4 (]: Writing injected SQL for node "test.insightflow_dbt.unique_mart_user_metrics_user_id.874d2f68a0"
+[0m17:45:41.728216 [debug] [Thread-1 (]: On test.insightflow_dbt.not_null_stg_raw_events_user_id.f7e4d46214: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "test.insightflow_dbt.not_null_stg_raw_events_user_id.f7e4d46214"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select user_id
+from "insightflow"."public"."stg_raw_events"
+where user_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:45:41.729728 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:45:41.729728 [debug] [Thread-2 (]: Began executing node test.insightflow_dbt.unique_mart_daily_metrics_day.93cadc6741
+[0m17:45:41.730733 [debug] [Thread-4 (]: Began executing node test.insightflow_dbt.unique_mart_user_metrics_user_id.874d2f68a0
+[0m17:45:41.732735 [debug] [Thread-2 (]: Writing runtime sql for node "test.insightflow_dbt.unique_mart_daily_metrics_day.93cadc6741"
+[0m17:45:41.735420 [debug] [Thread-4 (]: Writing runtime sql for node "test.insightflow_dbt.unique_mart_user_metrics_user_id.874d2f68a0"
+[0m17:45:41.736004 [debug] [Thread-2 (]: Using postgres connection "test.insightflow_dbt.unique_mart_daily_metrics_day.93cadc6741"
+[0m17:45:41.737988 [debug] [Thread-4 (]: Using postgres connection "test.insightflow_dbt.unique_mart_user_metrics_user_id.874d2f68a0"
+[0m17:45:41.737988 [debug] [Thread-2 (]: On test.insightflow_dbt.unique_mart_daily_metrics_day.93cadc6741: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "test.insightflow_dbt.unique_mart_daily_metrics_day.93cadc6741"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    day as unique_field,
+    count(*) as n_records
+
+from "insightflow"."public"."mart_daily_metrics"
+where day is not null
+group by day
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:45:41.737988 [debug] [Thread-4 (]: On test.insightflow_dbt.unique_mart_user_metrics_user_id.874d2f68a0: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "insightflow", "target_name": "dev", "node_id": "test.insightflow_dbt.unique_mart_user_metrics_user_id.874d2f68a0"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    user_id as unique_field,
+    count(*) as n_records
+
+from "insightflow"."public"."mart_user_metrics"
+where user_id is not null
+group by user_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:45:41.737988 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m17:45:41.739502 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m17:45:41.741545 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.013 seconds
+[0m17:45:41.744942 [debug] [Thread-1 (]: On test.insightflow_dbt.not_null_stg_raw_events_user_id.f7e4d46214: ROLLBACK
+[0m17:45:41.745943 [debug] [Thread-1 (]: On test.insightflow_dbt.not_null_stg_raw_events_user_id.f7e4d46214: Close
+[0m17:45:41.746945 [info ] [Thread-1 (]: 5 of 7 PASS not_null_stg_raw_events_user_id .................................... [[32mPASS[0m in 0.05s]
+[0m17:45:41.747989 [debug] [Thread-1 (]: Finished running node test.insightflow_dbt.not_null_stg_raw_events_user_id.f7e4d46214
+[0m17:45:41.752845 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.014 seconds
+[0m17:45:41.753862 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.014 seconds
+[0m17:45:41.754754 [debug] [Thread-2 (]: On test.insightflow_dbt.unique_mart_daily_metrics_day.93cadc6741: ROLLBACK
+[0m17:45:41.754754 [debug] [Thread-4 (]: On test.insightflow_dbt.unique_mart_user_metrics_user_id.874d2f68a0: ROLLBACK
+[0m17:45:41.758518 [debug] [Thread-2 (]: On test.insightflow_dbt.unique_mart_daily_metrics_day.93cadc6741: Close
+[0m17:45:41.759041 [debug] [Thread-4 (]: On test.insightflow_dbt.unique_mart_user_metrics_user_id.874d2f68a0: Close
+[0m17:45:41.759566 [info ] [Thread-2 (]: 6 of 7 PASS unique_mart_daily_metrics_day ...................................... [[32mPASS[0m in 0.05s]
+[0m17:45:41.761666 [debug] [Thread-2 (]: Finished running node test.insightflow_dbt.unique_mart_daily_metrics_day.93cadc6741
+[0m17:45:41.760588 [info ] [Thread-4 (]: 7 of 7 PASS unique_mart_user_metrics_user_id ................................... [[32mPASS[0m in 0.05s]
+[0m17:45:41.762727 [debug] [Thread-4 (]: Finished running node test.insightflow_dbt.unique_mart_user_metrics_user_id.874d2f68a0
+[0m17:45:41.764314 [debug] [MainThread]: On master: COMMIT
+[0m17:45:41.764838 [debug] [MainThread]: Using postgres connection "master"
+[0m17:45:41.764838 [debug] [MainThread]: On master: COMMIT
+[0m17:45:41.765368 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:45:41.777723 [debug] [MainThread]: SQL status: COMMIT in 0.012 seconds
+[0m17:45:41.777723 [debug] [MainThread]: On master: Close
+[0m17:45:41.778731 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:45:41.778731 [debug] [MainThread]: Connection 'list_insightflow_public' was properly closed.
+[0m17:45:41.778731 [debug] [MainThread]: Connection 'test.insightflow_dbt.not_null_stg_raw_events_user_id.f7e4d46214' was properly closed.
+[0m17:45:41.778731 [debug] [MainThread]: Connection 'test.insightflow_dbt.unique_mart_daily_metrics_day.93cadc6741' was properly closed.
+[0m17:45:41.780077 [debug] [MainThread]: Connection 'test.insightflow_dbt.not_null_stg_raw_events_event_id.348d6d9dd0' was properly closed.
+[0m17:45:41.780077 [debug] [MainThread]: Connection 'test.insightflow_dbt.unique_mart_user_metrics_user_id.874d2f68a0' was properly closed.
+[0m17:45:41.780077 [info ] [MainThread]: 
+[0m17:45:41.781087 [info ] [MainThread]: Finished running 7 data tests in 0 hours 0 minutes and 0.33 seconds (0.33s).
+[0m17:45:41.782405 [debug] [MainThread]: Command end result
+[0m17:45:41.804052 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\marin\OneDrive\Desktop\InsightFlow\dbt_project\target\manifest.json
+[0m17:45:41.806848 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\marin\OneDrive\Desktop\InsightFlow\dbt_project\target\semantic_manifest.json
+[0m17:45:41.814329 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\marin\OneDrive\Desktop\InsightFlow\dbt_project\target\run_results.json
+[0m17:45:41.814329 [info ] [MainThread]: 
+[0m17:45:41.814868 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:45:41.815876 [info ] [MainThread]: 
+[0m17:45:41.815876 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=7
+[0m17:45:41.816874 [debug] [MainThread]: Command `dbt test` succeeded at 17:45:41.816874 after 1.27 seconds
+[0m17:45:41.817877 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0E9249430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0EB3ADBE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0E8E47680>]}
+[0m17:45:41.817877 [debug] [MainThread]: Flushing usage events
+[0m17:45:42.840744 [debug] [MainThread]: An error was encountered while trying to flush usage events

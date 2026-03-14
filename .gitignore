@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local env
+.env
+
+# Data artifacts
+data/raw/*.csv
+data/processed/*.csv
+
+# Streamlit
+.streamlit/
+
+# dbt artifacts
+dbt_project/target/
+dbt_project/dbt_packages/
+
+# OS/IDE
+.DS_Store
+Thumbs.db
+.vscode/

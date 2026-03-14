@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: stg_raw_events
+    columns:
+      - name: event_id
+        tests:
+          - not_null
+      - name: user_id
+        tests:
+          - not_null
+      - name: event_time
+        tests:
+          - not_null
+
+  - name: mart_user_metrics
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
+
+  - name: mart_daily_metrics
+    columns:
+      - name: day
+        tests:
+          - unique
+          - not_null
