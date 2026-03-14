@@ -6,21 +6,9 @@ Production-style аналитическая платформа для проду
 
 ## Скриншоты системы
 
-Скриншоты хранятся в папке `docs/screenshots/`.
-
-Dashboard (RU):
-
-![Dashboard RU](docs/screenshots/dashboard_ru.png)
-
 Dashboard (EN):
 
-![Dashboard EN](docs/screenshots/dashboard_en.png)
-
-dbt run/test:
-
-![dbt run and test](docs/screenshots/dbt_run.png)
-
-Если картинки не отображаются, положи файлы с этими именами в `docs/screenshots/`.
+![Dashboard RU](docs/screenshots/insight.png)
 
 ## Что внутри
 
